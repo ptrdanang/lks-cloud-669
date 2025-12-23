@@ -37,6 +37,35 @@
         <p>&copy; 2026 LKS Cloud Computing - Ma'arif NU Jatim</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+// Poin 5: Logging tetap ada untuk penilaian
+console.log("Script Internal Berhasil Dimuat!");
+
+async function getQuote() {
+    const quoteText = document.getElementById('quote-text');
+    const quoteAuthor = document.getElementById('quote-author');
+    
+    console.log("Status: Sedang mengambil data API...");
+
+    try {
+        // Menggunakan API AllOrigins agar lancar (CORS bypass)
+        const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/random'));
+        const data = await response.json();
+        const finalData = JSON.parse(data.contents);
+
+        quoteText.innerText = `"${finalData[0].q}"`;
+        quoteAuthor.innerText = `- ${finalData[0].a}`;
+        
+        console.log("Status: Data API Berhasil Muncul!"); 
+    } catch (error) {
+        console.error("Status Error: Gagal ambil API", error);
+        quoteText.innerText = "Koneksi sedang tidak stabil. Segarkan halaman.";
+        quoteAuthor.innerText = "- Sistem LKS";
+    }
+}
+
+// Menjalankan fungsi saat halaman dimuat
+window.onload = getQuote;
+</script>
 </body>
 </html>
