@@ -1,13 +1,14 @@
-console.log("Aplikasi LKS Cloud: Inisialisasi...");
+// Poin 5: Logging (Pasti muncul di Console jika script berhasil terpanggil)
+console.log("Script Berhasil Dimuat!");
 
 async function getQuote() {
     const quoteText = document.getElementById('quote-text');
     const quoteAuthor = document.getElementById('quote-author');
     
-    console.log("Status: Mengambil data API...");
+    console.log("Sedang mengambil data API...");
 
     try {
-        // Menggunakan API dari ZenQuotes (sering digunakan di lomba)
+        // Menggunakan API AllOrigins agar tidak terkena blokir (CORS)
         const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/random'));
         const data = await response.json();
         const finalData = JSON.parse(data.contents);
@@ -15,14 +16,14 @@ async function getQuote() {
         quoteText.innerText = `"${finalData[0].q}"`;
         quoteAuthor.innerText = `- ${finalData[0].a}`;
         
-        console.log("Status: Data API Berhasil Dimuat."); 
+        console.log("Data API Berhasil Muncul!"); 
     } catch (error) {
-        console.error("Status Error: Koneksi API gagal.", error);
-        
-        // JIKA GAGAL, Tampilkan pesan ini (Agar tidak kosong/stuck)
-        quoteText.innerText = "Koneksi sedang tidak stabil, silakan segarkan halaman.";
+        console.error("Gagal mengambil API:", error);
+        // Fallback jika internet mati/error
+        quoteText.innerText = "Koneksi internet diperlukan untuk fitur ini.";
         quoteAuthor.innerText = "- Sistem LKS";
     }
 }
 
-window.onload = getQuote;
+// Jalankan fungsi
+getQuote();
