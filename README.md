@@ -27,7 +27,7 @@ Aplikasi ini adalah sebuah Web App statis yang dibangun untuk memenuhi kualifika
 
 ## 🔗 Tautan Penting
 * **Repositori**: [https://github.com/ptrdanang/lks-cloud-669.git](https://github.com/ptrdanang/lks-cloud-669.git)
-* **Live Demo**: [https://lks-cloud-669-danang.vercel.app/](https://lks-cloud-669-danang.vercel.app/)
+* **Live Demo**: [https://lks-cloud-669.vercel.app/](https://lks-cloud-669.vercel.app/)
 
 ---
 **Identitas Peserta:**
