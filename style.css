@@ -33,13 +33,3 @@ footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #64748b; m
 @media (max-width: 600px) {
     .navbar .container { flex-direction: column; gap: 10px; }
 }
-
-/* Update style untuk teks agar lebih rapi */
-.card h1, .card h2, .card h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-.card p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
