@@ -3,81 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LKS Cloud 2026 - Beranda</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Beranda | LKS Cloud Computing 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
 </head>
 <body>
+
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">Cloud<span>LKS</span></a>
-                <ul class="nav-links">
+        <div class="container">
+            <h1>LKS Cloud Deploy ☁️</h1>
+            <nav>
+                <ul>
                     <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="about.html">Tentang</a></li>
-                </ul>
-            </div>
-        </nav>
+                    <li><a href="about.html">Identitas Peserta</a></li>
+                    </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="card" style="text-align: left;">
-            <h1>Apa itu Cloud Computing?</h1>
-            <p style="margin-top: 15px; color: #555;">
-                <strong>Cloud Computing</strong> atau komputasi awan adalah teknologi yang menjadikan internet sebagai pusat pengelolaan data dan aplikasi. Pengguna tidak perlu menyimpan data di perangkat fisik (seperti harddisk) secara lokal, melainkan dapat mengaksesnya secara online kapan saja dan di mana saja.
-            </p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Selamat Datang di Portal Deployment Cloud</h2>
+                <p class="description">
+                    Aplikasi web statis sederhana ini dikembangkan sebagai tugas Lomba Kompetensi Siswa (LKS) SMK bidang Cloud Computing tahun 2026. Proyek ini mendemonstrasikan proses Deployment Otomatis dari GitHub ke Layanan Cloud (Vercel/Netlify).
+                </p>
+                
+                <a href="#fitur" class="button">Pelajari Lebih Lanjut</a>
+            </div>
         </section>
 
-        <section class="card" style="text-align: left;">
-            <h2>Jenis-Jenis Layanan Cloud</h2>
-            <p>Terdapat tiga model layanan utama dalam Cloud Computing:</p>
-            
-            <div style="margin-top: 20px;">
-                <div style="margin-bottom: 15px;">
-                    <strong style="color: #3498db;">1. IaaS (Infrastructure as a Service)</strong>
-                    <p>Penyewaan infrastruktur IT dasar seperti server, storage, dan jaringan. Contoh: AWS (EC2), Google Compute Engine.</p>
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <strong style="color: #3498db;">2. PaaS (Platform as a Service)</strong>
-                    <p>Menyediakan platform untuk pengembang membangun aplikasi tanpa pusing memikirkan server. Contoh: **Vercel** (yang kita gunakan saat ini), Netlify, dan Heroku.</p>
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <strong style="color: #3498db;">3. SaaS (Software as a Service)</strong>
-                    <p>Layanan aplikasi siap pakai yang langsung bisa digunakan oleh pengguna melalui browser. Contoh: Google Drive, Office 365, dan Slack.</p>
+        <section id="fitur" class="content-section">
+            <div class="container">
+                <h3>Apa Itu Cloud Computing?</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>IaaS (Infrastructure)</h4>
+                        <p>Menyediakan sumber daya komputasi dasar seperti Virtual Machine (VM), jaringan, dan penyimpanan.</p>
+                    </div>
+                    <div class="card">
+                        <h4>PaaS (Platform)</h4>
+                        <p>Menyediakan lingkungan yang siap digunakan untuk mengembangkan, menjalankan, dan mengelola aplikasi tanpa mengurus infrastruktur.</p>
+                    </div>
+                    <div class="card">
+                        <h4>SaaS (Software)</h4>
+                        <p>Perangkat lunak yang dapat diakses melalui internet, dikelola sepenuhnya oleh penyedia layanan (contoh: Google Workspace, Office 365).</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="card">
-            <h3>Kutipan Teknologi Hari Ini</h3>
-            <div id="quote-box" style="margin: 20px 0; font-style: italic; color: #666;">
-                <p id="quote">Memuat kutipan...</p>
-                <h4 id="author"></h4>
+        <section class="api-section">
+            <div class="container">
+                <h3>Fitur Dinamis (LKS Requirement)</h3>
+                <p>Mengambil data dari API publik sebagai demonstrasi fungsionalitas JavaScript.</p>
+                <div id="data-api" class="api-result">Loading data dari API...</div>
             </div>
-            <button onclick="getQuote()" class="btn">Ambil Kutipan Baru</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 LKS Cloud Computing - Ma'arif NU Jatim</p>
+        <div class="container">
+            <p>&copy; 2026 LKS Cloud Computing. Deploy by Walidi Danang.</p>
+        </div>
     </footer>
 
     <script>
-        // Log untuk poin penilaian Logging (5 Poin)
-        console.log("Aplikasi Cloud LKS Berhasil Dimuat");
+       
+        console.log("Aplikasi Beranda LKS Cloud Dimuat (index.html).");
+        console.log("Memulai proses fetch data untuk fitur dinamis...");
 
-        function getQuote() {
-            console.log("Proses: Mengambil kutipan dari API...");
-            fetch('https://api.quotable.io/random')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('quote').innerText = `"${data.content}"`;
-                    document.getElementById('author').innerText = `- ${data.author}`;
-                    console.log("Berhasil: Data kutipan diperbarui");
-                });
-        }
-        window.onload = getQuote;
+
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then(response => {
+                console.log("Data API berhasil diterima. Status:", response.status);
+                return response.json();
+            })
+            .then(data => {
+                const apiDiv = document.getElementById('data-api');
+                apiDiv.innerHTML = `
+                    <h4>Contoh Data yang Berhasil Diambil:</h4>
+                    <strong>Judul:</strong> ${data.title} <br>
+                    <strong>Isi:</strong> ${data.body.substring(0, 100)}...
+                `;
+            })
+            .catch(error => {
+                console.error("Terjadi error saat mengambil data API!", error);
+                document.getElementById('data-api').textContent = 'Gagal memuat data API.';
+            });
     </script>
+
 </body>
 </html>
