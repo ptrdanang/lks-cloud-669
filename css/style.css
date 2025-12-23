@@ -202,21 +202,45 @@ footer {
     width: 150px; 
 }
 
-.cloud-section {
-  padding: 40px;
+/* Layout Flexbox Khusus Pengertian */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
-.cloud-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.intro-text {
+    flex: 1.5; /* Memberi ruang lebih besar untuk teks */
 }
 
-.cloud-image img {
-  width: 350px;
-  max-width: 100%;
+.intro-image {
+    flex: 1;
+    text-align: center;
 }
 
-.cloud-text {
-  text-align: justify;
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Memastikan Card Grid tetap di bawah dan rapi */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Responsif untuk Smartphone */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Menumpuk vertikal saat di HP */
+        text-align: center;
+    }
+    .intro-text p {
+        text-align: left;
+    }
 }
