@@ -33,11 +33,11 @@ Berikut adalah tampilan antarmuka dari Web App LKS Cloud Computing 2026:
 *Menampilkan hero section, pengertian Cloud Computing, dan model layanan (IaaS, PaaS, SaaS).*
 
 ### Fitur API Dinamis
-![Fitur API]![alt text]image-1.png
+![Fitur API]![alt text](image-1.png)
 *Menampilkan hasil pengambilan data secara real-time dari API publik.*
 
 ### Identitas Peserta (Tentang Saya)
-![Tentang Saya]![alt text]image-2.png
+![Tentang Saya]![alt text](image-2.png)
 *Halaman identitas resmi peserta LKS.*
 
 ## 🔗 Tautan Penting
