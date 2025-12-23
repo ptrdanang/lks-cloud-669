@@ -15,5 +15,5 @@ Aplikasi web responsif sederhana yang menampilkan identitas peserta dan fitur ku
 - Tidak ada hardcoded credential/API Key.
 
 ### Tautan
-- **Link GitHub:** [Paste Link Repo Kamu]
-- **Link Deploy:** [Paste Link Vercel/Netlify Kamu]
+- **Link GitHub:** https://github.com/ptrdanang/lks-cloud-669.git
+- **Link Deploy:** https://lks-cloud-669-danang.vercel.app/
