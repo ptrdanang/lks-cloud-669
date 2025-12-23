@@ -1,0 +1,5 @@
+# Keamanan: Jangan upload file konfigurasi lokal
+.env
+node_modules/
+.DS_Store
+*.log
