@@ -201,3 +201,40 @@ footer {
     display: inline-block;
     width: 150px; 
 }
+
+/* Layout Flexbox untuk Gambar di Samping Teks */
+.flex-container {
+    display: flex;
+    align-items: center; /* Menyejajarkan teks dan gambar di tengah secara vertikal */
+    gap: 40px; /* Jarak antara teks dan gambar */
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    flex: 1; /* Teks mengambil ruang yang tersedia */
+}
+
+.intro-image {
+    flex: 1; /* Gambar mengambil ruang yang tersedia */
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05); /* Efek zoom sedikit saat gambar disentuh */
+}
+
+/* Responsif: Jika dibuka di HP, gambar akan pindah ke bawah teks */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
