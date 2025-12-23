@@ -1,7 +1,7 @@
 # Web Deployment LKS Cloud Computing 2026
 
 ### Deskripsi Aplikasi
-Aplikasi web responsif sederhana yang menampilkan identitas peserta dan fitur kutipan dinamis menggunakan API publik.
+Aplikasi web responsif sederhana yang menampilkan pengertian dari Cloud Computing beserta Model Layanan Cloud dan juga identitas peserta dan fitur kutipan dinamis menggunakan API publik.
 
 ### Langkah Deployment
 1. Upload folder ke GitHub Repository.
